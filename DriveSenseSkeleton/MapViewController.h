@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+{
+    CLLocationManager *locationManager;
+    MKMapView *mapView;
+    UIToolbar *toolBar;
+    UIToolbar *toolbar;
+    bool manualToggle;
+    NSMutableArray *geoLocation;
+    BOOL ManualTracking;
+}
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
