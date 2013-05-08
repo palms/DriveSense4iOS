@@ -38,6 +38,8 @@
 		03D29D5A173A133800218AE9 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D59173A133800218AE9 /* black.png */; };
 		03D29D5C173A199D00218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5B173A199D00218AE9 /* icon.png */; };
 		03D29D5E173A19E200218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5D173A19E200218AE9 /* icon.png */; };
+		0BE53994173AE3F000FF8BBF /* DBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE53993173AE3F000FF8BBF /* DBAdapter.m */; };
+		0BE5399F173AE6B400FF8BBF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE5399E173AE6B400FF8BBF /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,9 @@
 		03D29D59173A133800218AE9 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = ../../../Desktop/black.png; sourceTree = "<group>"; };
 		03D29D5B173A199D00218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../Desktop/icon.png; sourceTree = "<group>"; };
 		03D29D5D173A19E200218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		0BE53992173AE3F000FF8BBF /* DBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAdapter.h; sourceTree = "<group>"; };
+		0BE53993173AE3F000FF8BBF /* DBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAdapter.m; sourceTree = "<group>"; };
+		0BE5399E173AE6B400FF8BBF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE5399F173AE6B400FF8BBF /* libsqlite3.dylib in Frameworks */,
 				03C3B5AE1739844700A466B9 /* SystemConfiguration.framework in Frameworks */,
 				03C3B5AC1739843800A466B9 /* Accelerate.framework in Frameworks */,
 				03833F5E16EFBA7200FF2B19 /* MapKit.framework in Frameworks */,
@@ -152,6 +158,7 @@
 		03833F1016EFB13300FF2B19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BE5399E173AE6B400FF8BBF /* libsqlite3.dylib */,
 				03833F1116EFB13300FF2B19 /* UIKit.framework */,
 				03833F1316EFB13300FF2B19 /* Foundation.framework */,
 				03833F1516EFB13300FF2B19 /* CoreGraphics.framework */,
@@ -178,6 +185,8 @@
 				03833F2F16EFB13600FF2B19 /* ViewController.h */,
 				03833F3016EFB13600FF2B19 /* ViewController.m */,
 				03833F1816EFB13300FF2B19 /* Supporting Files */,
+				0BE53992173AE3F000FF8BBF /* DBAdapter.h */,
+				0BE53993173AE3F000FF8BBF /* DBAdapter.m */,
 			);
 			path = DriveSenseSkeleton;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 				03833F5716EFB88100FF2B19 /* MainViewController.m in Sources */,
 				03833F5A16EFBA3700FF2B19 /* MapViewController.m in Sources */,
 				03C3B5B2173997E900A466B9 /* OptionsController.m in Sources */,
+				0BE53994173AE3F000FF8BBF /* DBAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
