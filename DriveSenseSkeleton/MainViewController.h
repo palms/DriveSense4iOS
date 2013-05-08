@@ -14,10 +14,12 @@
     CLLocationManager *locationManager;
     bool manualToggle;
     NSMutableArray *geoLocation;
+    NSMutableArray *speed;
     
     @public
     bool autoCollectOn;
-    bool gpsTrackingOn;
+    bool trackSpeedOn;
+    bool uploadButtonStatus;
 }
 
 
@@ -27,6 +29,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *uploadButton;
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *autoCollectButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *trackSpeedButton;
 
 
 @end

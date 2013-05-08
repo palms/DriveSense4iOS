@@ -15,7 +15,7 @@
 @end
 
 @implementation MainViewController
-@synthesize trackingButton, mapButton, uploadButton, logo, autoCollectButton;
+@synthesize trackingButton, mapButton, uploadButton, logo, autoCollectButton, trackSpeedButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +33,8 @@
 	// Do any additional setup after loading the view.
     
     self.navigationItem.title = @"DriveSense iOS";
+    
+    NSTimer *myTimer = [NSTimer scheduledTimerWithTimeInterval: 3 target: self selector: @selector (updateUploadButton) userInfo: nil repeats: YES];
     
     //[self checkForWIFIConnection];
     
@@ -53,6 +55,7 @@
     [uploadButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     geoLocation = [[NSMutableArray alloc] initWithCapacity:100];
+    speed = [[NSMutableArray alloc] initWithCapacity:100];
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -68,6 +71,13 @@
     NSString *txt = @"DriveSense iOS beta - for testing  purposes only; does not represent a final version.";
     labelTxt.text = txt;
      */
+}
+
+-(void)updateUploadButton {
+    if (uploadButtonStatus == true) {
+        [uploadButton setTitle:@"Upload" forState:UIControlStateNormal];
+        [uploadButton setTitleColor:nil forState:UIControlStateNormal];
+    }
 }
 
 - (bool)checkBattery {
@@ -94,11 +104,13 @@
     
     if (manualToggle == true) {
         CLLocation *location = [locations objectAtIndex:0];
-        //double gpsSpeed = location.speed;
-        //NSLog(@"speed:%f", gpsSpeed);
         NSLog(@"lat%f - lon%f", location.coordinate.latitude, location.coordinate.longitude);
         //add geodata to NSMutable Array
         [geoLocation addObject:location];
+        if (trackSpeedOn == true) {
+            double gpsSpeed = location.speed;
+            NSLog(@"speed:%f", gpsSpeed);
+        }
     }
     
     if (autoCollectOn == true) {
@@ -106,6 +118,10 @@
         NSLog(@"lat%f - lon%f", location.coordinate.latitude, location.coordinate.longitude);
         //add geodata to NSMutable Array
         [geoLocation addObject:location];
+        if (trackSpeedOn == true) {
+            double gpsSpeed = location.speed;
+            NSLog(@"speed:%f", gpsSpeed);
+        }
     }
     
     /*
@@ -143,8 +159,14 @@
     Reachability* wifiReach = [Reachability reachabilityForLocalWiFi];
     NetworkStatus netStatus = [wifiReach currentReachabilityStatus];
     if (netStatus!=ReachableViaWiFi) {
+        [uploadButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        //double delaySec = 2.0;
+        //dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delaySec * NSEC_PER_SEC);
+        //dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
         [uploadButton setTitle:@"No WIFI!" forState:UIControlStateNormal];
         [uploadButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        //});
+        uploadButtonStatus = true;
     }
     else {
         [uploadButton setTitle:@"Uploading..." forState:UIControlStateNormal];
@@ -178,13 +200,17 @@
         
         if (batteryStatus == true) {
             
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBattery) name:@"UIDeviceBatteryStateDidChangeNotification" object:device];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(batteryStatusCheck) name:@"UIDeviceBatteryStateDidChangeNotification" object:device];
             
             //signal button pressed, tracking
             [trackingButton setEnabled: NO];
-            [trackingButton setTitle:@"Auto Collect..." forState:UIControlStateNormal];
-            [trackingButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+            [trackingButton setTitle:@"Disabled" forState:UIControlStateNormal];
+            [trackingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [trackingButton setBackgroundColor:[UIColor redColor]];
+            [trackingButton setAlpha:0.42];
+            
             autoCollectOn = true;
+            autoCollectButton.tintColor = [UIColor greenColor];
         }
         
         else {
@@ -197,11 +223,14 @@
         [trackingButton setEnabled: YES];
         [trackingButton setTitle:@"Track" forState:UIControlStateNormal];
         [trackingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [trackingButton setBackgroundColor:nil];
+        [trackingButton setAlpha:1];
         
         UIDevice *device = [UIDevice currentDevice];
         device.batteryMonitoringEnabled = NO;
         
         autoCollectOn = false;
+        autoCollectButton.tintColor = nil;
     }
 
 }
@@ -224,5 +253,34 @@
     
 }
 */
+- (IBAction)trackSpeedPress:(id)sender {
+    if (trackSpeedOn == false) {
+        trackSpeedOn = true;
+        trackSpeedButton.tintColor = [UIColor greenColor];
+        
+    }
+    else {
+        trackSpeedOn = false;
+        trackSpeedButton.tintColor = nil;
+    }
+}
+
+-(void)batteryStatusCheck {
+    bool status = [self checkBattery];
+    if (status == false) {
+        
+        [trackingButton setEnabled: YES];
+        [trackingButton setTitle:@"Track" forState:UIControlStateNormal];
+        [trackingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [trackingButton setBackgroundColor:nil];
+        [trackingButton setAlpha:1];
+        
+        UIDevice *device = [UIDevice currentDevice];
+        device.batteryMonitoringEnabled = NO;
+        
+        autoCollectOn = false;
+        autoCollectButton.tintColor = nil;
+    }
+}
 
 @end
