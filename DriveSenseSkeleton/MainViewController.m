@@ -2,13 +2,12 @@
 //  MainViewController.m
 //  DriveSenseSkeleton
 //
-//  Created by The Protagonist on 3/12/13.
+//  Created by Saul Laufer on 3/12/13.
 //  Copyright (c) 2013 Group Eggo. All rights reserved.
 //
 
 #import "MainViewController.h"
 #import "Reachability.h"
-#import "OptionsController.h"
 #import "DBAdapter.h"
 
 @interface MainViewController ()
@@ -32,8 +31,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.navigationItem.title = @"DriveSense iOS";
     
     adapter = [[DBAdapter alloc] init];
     
@@ -244,15 +241,6 @@
         [adapter closeDB];
     }
 
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"OptionsSegue"])
-    {
-        OptionsController *options = [segue destinationViewController];
-        options->autoCollectOn = self->autoCollectOn;
-    }
 }
 
 /*

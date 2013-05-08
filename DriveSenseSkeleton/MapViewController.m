@@ -2,7 +2,7 @@
 //  MapViewController.m
 //  DriveSenseSkeleton
 //
-//  Created by The Protagonist on 3/12/13.
+//  Created by Saul Laufer on 3/12/13.
 //  Copyright (c) 2013 Group Eggo. All rights reserved.
 //
 
@@ -31,6 +31,8 @@
     
     //init loc data array with arbitrary value
     
+    [self centerLoc];
+    
     mapView.delegate = self; 
     
     mapView.showsUserLocation = YES;
@@ -39,22 +41,6 @@
     mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     mapView.mapType = MKMapTypeHybrid;
     
-        /*
-        CLLocationCoordinate2D coordinate;
-        coordinate = CLLocationCoordinate2DMake([[locationInfo objectForKey:@"latitude"] floatValue], [[locationInfo objectForKey:@"longitude"] floatValue]);
-        
-        
-        
-        NSString *lat = [NSString stringWithFormat:@"%@",[locationInfo objectForKey:@"latitude"]];
-        NSString *longi = [NSString stringWithFormat:@"%@",[locationInfo objectForKey:@"longitude"]];
-        lat = [lat stringByAppendingString:@", "];
-        lat = [lat stringByAppendingString:longi];
-        annotation.subtitle = lat;
-        [mapView addAnnotation:annotation];
-        
-        [self.view addSubview:mapView];
-         
-         */
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,6 +52,11 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation: (MKUserLocation *)userLocation
 {
     self.mapView.centerCoordinate = userLocation.location.coordinate;
+}
+
+-(void)centerLoc {
+    [mapView setCenterCoordinate:mapView.userLocation.location.coordinate animated:YES];
+
 }
 
 @end

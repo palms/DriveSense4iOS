@@ -8,10 +8,11 @@
         <scene sceneID="Fhc-JM-SSm">
             <objects>
                 <navigationController definesPresentationContext="YES" id="vJe-4c-3SL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L9M-Rj-SBh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="DriveSenseBar" id="L9M-Rj-SBh">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
+                        <outlet property="navBar" destination="L9M-Rj-SBh" id="ndM-Dc-qne"/>
                         <segue destination="Fol-tt-k7x" kind="relationship" relationship="rootViewController" id="qdT-z4-4ZZ"/>
                     </connections>
                 </navigationController>
@@ -176,6 +177,32 @@
             <point key="canvasLocation" x="-442" y="-1024"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="autoCollectPress:"/>
+                <relationship kind="action" name="track:"/>
+                <relationship kind="action" name="trackSpeedPress:"/>
+                <relationship kind="action" name="upload:"/>
+                <relationship kind="outlet" name="autoCollectButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mapButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="trackSpeedButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="trackingButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03280E0E1739A7AF000ADD65 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03280E0D1739A7AF000ADD65 /* back.jpg */; };
 		03833F1216EFB13300FF2B19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F1116EFB13300FF2B19 /* UIKit.framework */; };
 		03833F1416EFB13300FF2B19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F1316EFB13300FF2B19 /* Foundation.framework */; };
 		03833F1616EFB13300FF2B19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F1516EFB13300FF2B19 /* CoreGraphics.framework */; };
@@ -30,13 +29,12 @@
 		03833F5C16EFBA6700FF2B19 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F5B16EFBA6700FF2B19 /* CoreLocation.framework */; };
 		03833F5E16EFBA7200FF2B19 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F5D16EFBA7200FF2B19 /* MapKit.framework */; };
 		0384E0901738A3520045C246 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 0384E08F1738A3520045C246 /* car.png */; };
+		039E9153173B0AC9007C0B17 /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039E9152173B0AC9007C0B17 /* NavController.m */; };
 		03C3B5A9173983A700A466B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3B5A8173983A700A466B9 /* Reachability.m */; };
 		03C3B5AA1739841400A466B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3B5A8173983A700A466B9 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		03C3B5AC1739843800A466B9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3B5AB1739843800A466B9 /* Accelerate.framework */; };
 		03C3B5AE1739844700A466B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */; };
-		03C3B5B2173997E900A466B9 /* OptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3B5B0173990A400A466B9 /* OptionsController.m */; };
 		03D29D5A173A133800218AE9 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D59173A133800218AE9 /* black.png */; };
-		03D29D5C173A199D00218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5B173A199D00218AE9 /* icon.png */; };
 		03D29D5E173A19E200218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5D173A19E200218AE9 /* icon.png */; };
 		03D29D61173AF55C00218AE9 /* DBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D29D60173AF55C00218AE9 /* DBAdapter.m */; };
 		03D29D63173AF60000218AE9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D29D62173AF60000218AE9 /* libsqlite3.dylib */; };
@@ -53,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03280E0D1739A7AF000ADD65 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back.jpg; path = ../../../Desktop/back.jpg; sourceTree = "<group>"; };
 		03833F0E16EFB13300FF2B19 /* DriveSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03833F1116EFB13300FF2B19 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03833F1316EFB13300FF2B19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,14 +81,13 @@
 		03833F5B16EFBA6700FF2B19 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		03833F5D16EFBA7200FF2B19 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0384E08F1738A3520045C246 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car.png; path = ../../../Downloads/car.png; sourceTree = "<group>"; };
+		039E9151173B0AC9007C0B17 /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
+		039E9152173B0AC9007C0B17 /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
 		03C3B5A7173983A700A466B9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../../Downloads/Reachability/Classes/Reachability.h; sourceTree = "<group>"; };
 		03C3B5A8173983A700A466B9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../../../Downloads/Reachability/Classes/Reachability.m; sourceTree = "<group>"; };
 		03C3B5AB1739843800A466B9 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		03C3B5AF173990A400A466B9 /* OptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsController.h; sourceTree = "<group>"; };
-		03C3B5B0173990A400A466B9 /* OptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsController.m; sourceTree = "<group>"; };
 		03D29D59173A133800218AE9 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = ../../../Desktop/black.png; sourceTree = "<group>"; };
-		03D29D5B173A199D00218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../Desktop/icon.png; sourceTree = "<group>"; };
 		03D29D5D173A19E200218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		03D29D5F173AF55C00218AE9 /* DBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAdapter.h; path = ../../../../Downloads/DBAdapter.h; sourceTree = "<group>"; };
 		03D29D60173AF55C00218AE9 /* DBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAdapter.m; path = ../../../../Downloads/DBAdapter.m; sourceTree = "<group>"; };
@@ -132,9 +128,7 @@
 			children = (
 				03D29D62173AF60000218AE9 /* libsqlite3.dylib */,
 				03D29D5D173A19E200218AE9 /* icon.png */,
-				03D29D5B173A199D00218AE9 /* icon.png */,
 				03D29D59173A133800218AE9 /* black.png */,
-				03280E0D1739A7AF000ADD65 /* back.jpg */,
 				03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */,
 				03C3B5AB1739843800A466B9 /* Accelerate.framework */,
 				0384E08F1738A3520045C246 /* car.png */,
@@ -177,8 +171,8 @@
 				03833F2016EFB13300FF2B19 /* AppDelegate.h */,
 				03833F2116EFB13400FF2B19 /* AppDelegate.m */,
 				03833F2916EFB13500FF2B19 /* MainStoryboard_iPhone.storyboard */,
-				03C3B5AF173990A400A466B9 /* OptionsController.h */,
-				03C3B5B0173990A400A466B9 /* OptionsController.m */,
+				039E9151173B0AC9007C0B17 /* NavController.h */,
+				039E9152173B0AC9007C0B17 /* NavController.m */,
 				03833F5816EFBA3700FF2B19 /* MapViewController.h */,
 				03833F5916EFBA3700FF2B19 /* MapViewController.m */,
 				03833F5516EFB88100FF2B19 /* MainViewController.h */,
@@ -302,9 +296,7 @@
 				03833F2B16EFB13500FF2B19 /* MainStoryboard_iPhone.storyboard in Resources */,
 				03833F2E16EFB13500FF2B19 /* MainStoryboard_iPad.storyboard in Resources */,
 				0384E0901738A3520045C246 /* car.png in Resources */,
-				03280E0E1739A7AF000ADD65 /* back.jpg in Resources */,
 				03D29D5A173A133800218AE9 /* black.png in Resources */,
-				03D29D5C173A199D00218AE9 /* icon.png in Resources */,
 				03D29D5E173A19E200218AE9 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,8 +338,8 @@
 				03833F3116EFB13600FF2B19 /* ViewController.m in Sources */,
 				03833F5716EFB88100FF2B19 /* MainViewController.m in Sources */,
 				03833F5A16EFBA3700FF2B19 /* MapViewController.m in Sources */,
-				03C3B5B2173997E900A466B9 /* OptionsController.m in Sources */,
 				03D29D61173AF55C00218AE9 /* DBAdapter.m in Sources */,
+				039E9153173B0AC9007C0B17 /* NavController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
