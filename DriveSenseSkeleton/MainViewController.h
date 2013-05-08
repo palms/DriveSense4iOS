@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "DBAdapter.h"
 
 @interface MainViewController : UIViewController <CLLocationManagerDelegate>
 {
@@ -30,6 +31,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *logo;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *autoCollectButton;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *trackSpeedButton;
+@property (strong, nonatomic) DBAdapter *adapter;
 
 
 @end
