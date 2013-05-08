@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03280E0E1739A7AF000ADD65 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03280E0D1739A7AF000ADD65 /* back.jpg */; };
 		03833F1216EFB13300FF2B19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F1116EFB13300FF2B19 /* UIKit.framework */; };
 		03833F1416EFB13300FF2B19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F1316EFB13300FF2B19 /* Foundation.framework */; };
 		03833F1616EFB13300FF2B19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F1516EFB13300FF2B19 /* CoreGraphics.framework */; };
@@ -34,6 +35,9 @@
 		03C3B5AC1739843800A466B9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3B5AB1739843800A466B9 /* Accelerate.framework */; };
 		03C3B5AE1739844700A466B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */; };
 		03C3B5B2173997E900A466B9 /* OptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3B5B0173990A400A466B9 /* OptionsController.m */; };
+		03D29D5A173A133800218AE9 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D59173A133800218AE9 /* black.png */; };
+		03D29D5C173A199D00218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5B173A199D00218AE9 /* icon.png */; };
+		03D29D5E173A19E200218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5D173A19E200218AE9 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03280E0D1739A7AF000ADD65 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back.jpg; path = ../../../Desktop/back.jpg; sourceTree = "<group>"; };
 		03833F0E16EFB13300FF2B19 /* DriveSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03833F1116EFB13300FF2B19 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03833F1316EFB13300FF2B19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +88,9 @@
 		03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		03C3B5AF173990A400A466B9 /* OptionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsController.h; sourceTree = "<group>"; };
 		03C3B5B0173990A400A466B9 /* OptionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsController.m; sourceTree = "<group>"; };
+		03D29D59173A133800218AE9 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = ../../../Desktop/black.png; sourceTree = "<group>"; };
+		03D29D5B173A199D00218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../Desktop/icon.png; sourceTree = "<group>"; };
+		03D29D5D173A19E200218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,10 @@
 		03833F0516EFB13200FF2B19 = {
 			isa = PBXGroup;
 			children = (
+				03D29D5D173A19E200218AE9 /* icon.png */,
+				03D29D5B173A199D00218AE9 /* icon.png */,
+				03D29D59173A133800218AE9 /* black.png */,
+				03280E0D1739A7AF000ADD65 /* back.jpg */,
 				03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */,
 				03C3B5AB1739843800A466B9 /* Accelerate.framework */,
 				0384E08F1738A3520045C246 /* car.png */,
@@ -281,6 +293,10 @@
 				03833F2B16EFB13500FF2B19 /* MainStoryboard_iPhone.storyboard in Resources */,
 				03833F2E16EFB13500FF2B19 /* MainStoryboard_iPad.storyboard in Resources */,
 				0384E0901738A3520045C246 /* car.png in Resources */,
+				03280E0E1739A7AF000ADD65 /* back.jpg in Resources */,
+				03D29D5A173A133800218AE9 /* black.png in Resources */,
+				03D29D5C173A199D00218AE9 /* icon.png in Resources */,
+				03D29D5E173A19E200218AE9 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

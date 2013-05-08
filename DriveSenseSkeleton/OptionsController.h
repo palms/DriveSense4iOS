@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OptionsController : UITableViewController
+@interface OptionsController : UITableViewController {
+    
+    @public
+    bool autoCollectOn;
+    bool gpsTrackingOn;
+}
 
 @property (nonatomic, strong) NSArray *items;
 

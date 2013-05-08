@@ -7,6 +7,7 @@
 //
 
 #import "OptionsController.h"
+#import "MainViewController.h"
 
 @interface OptionsController ()
 
@@ -29,7 +30,15 @@
 {
     [super viewDidLoad];
     
-    self.items = [NSArray arrayWithObjects:@"Auto Collect",@"Use GPS Tracking",nil];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back.jpg"]];
+    
+    /*
+    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back.jpg"]];
+    [self.view addSubview:background];
+    [self.view sendSubviewToBack:background];
+     */
+    
+    self.items = [NSArray arrayWithObjects:@"Auto Collect",@"Use GPS Tracking", @"Direction Sensor", @"Speed Sensor",nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -71,6 +80,13 @@
     // Configure the cell...
     
     cell.textLabel.text = [self.items objectAtIndex:indexPath.row];
+    if (indexPath.row != 1) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
     return cell;
 }
 
@@ -97,6 +113,15 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"OptionsToMain"])
+    {
+        MainViewController *mV = [segue destinationViewController];
+        mV->autoCollectOn = self->autoCollectOn;
+    }
+}
+
 
 #pragma mark - Table view delegate
 
@@ -114,12 +139,61 @@
     NSString *cellTxt = cell.textLabel.text;
     
     if ([cellTxt isEqualToString:[items objectAtIndex:0]]) {
-        [self performSegueWithIdentifier:@"ShowCaption" sender:self];
+        if (autoCollectOn == false) {
+            
+            UIDevice *device = [UIDevice currentDevice];
+            device.batteryMonitoringEnabled = YES;
+            
+            bool batteryStatus = [self checkBattery];
+            
+            if (batteryStatus == true) {
+            
+                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBattery) name:@"UIDeviceBatteryStateDidChangeNotification" object:device];
+            
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                autoCollectOn = true;
+            }
+            
+            else {
+                device.batteryMonitoringEnabled = NO;
+                cell.textLabel.textColor = [UIColor redColor];
+            }
+        }
+        else {
+             cell.accessoryType = UITableViewCellAccessoryNone;
+            
+            UIDevice *device = [UIDevice currentDevice];
+            device.batteryMonitoringEnabled = NO;
+            
+            autoCollectOn = false;
+        }
+        // autocollect
+        //[self performSegueWithIdentifier:@"ShowCaption" sender:self];
+    }
+    else if ([cellTxt isEqualToString:[items objectAtIndex:1]]) {
+        //gps tracking
+        //[self performSegueWithIdentifier:@"ShowTags" sender:self];
+    }
+    else if ([cellTxt isEqualToString:[items objectAtIndex:2]]) {
+        //direction sensor
+        //[self performSegueWithIdentifier:@"ShowLikes" sender:self];
     }
     else {
-        [self performSegueWithIdentifier:@"ShowTags" sender:self];
+        //speed sensor
+        //[self performSegueWithIdentifier:@"ShowLocation" sender:self];
     }
+}
 
+- (bool)checkBattery {
+    if ([[UIDevice currentDevice] batteryState] == UIDeviceBatteryStateUnknown) {
+        return true;
+    }
+    else {
+        if ([[UIDevice currentDevice] batteryState] == UIDeviceBatteryStateUnplugged) {
+            return false;
+        }
+    }
+    return true;
 }
 
 @end
