@@ -29,14 +29,13 @@
 		03833F5C16EFBA6700FF2B19 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F5B16EFBA6700FF2B19 /* CoreLocation.framework */; };
 		03833F5E16EFBA7200FF2B19 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03833F5D16EFBA7200FF2B19 /* MapKit.framework */; };
 		0384E0901738A3520045C246 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 0384E08F1738A3520045C246 /* car.png */; };
-		039E9153173B0AC9007C0B17 /* NavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039E9152173B0AC9007C0B17 /* NavController.m */; };
+		038CBAF317431F6A00E07085 /* DBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 038CBAF217431F6A00E07085 /* DBAdapter.m */; };
 		03C3B5A9173983A700A466B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3B5A8173983A700A466B9 /* Reachability.m */; };
 		03C3B5AA1739841400A466B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3B5A8173983A700A466B9 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		03C3B5AC1739843800A466B9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3B5AB1739843800A466B9 /* Accelerate.framework */; };
 		03C3B5AE1739844700A466B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */; };
 		03D29D5A173A133800218AE9 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D59173A133800218AE9 /* black.png */; };
 		03D29D5E173A19E200218AE9 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D29D5D173A19E200218AE9 /* icon.png */; };
-		03D29D61173AF55C00218AE9 /* DBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D29D60173AF55C00218AE9 /* DBAdapter.m */; };
 		03D29D63173AF60000218AE9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D29D62173AF60000218AE9 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
@@ -81,16 +80,14 @@
 		03833F5B16EFBA6700FF2B19 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		03833F5D16EFBA7200FF2B19 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0384E08F1738A3520045C246 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car.png; path = ../../../Downloads/car.png; sourceTree = "<group>"; };
-		039E9151173B0AC9007C0B17 /* NavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavController.h; sourceTree = "<group>"; };
-		039E9152173B0AC9007C0B17 /* NavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavController.m; sourceTree = "<group>"; };
+		038CBAF217431F6A00E07085 /* DBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAdapter.m; sourceTree = "<group>"; };
+		038CBAF417431F8C00E07085 /* DBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAdapter.h; sourceTree = "<group>"; };
 		03C3B5A7173983A700A466B9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../../Downloads/Reachability/Classes/Reachability.h; sourceTree = "<group>"; };
 		03C3B5A8173983A700A466B9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../../../Downloads/Reachability/Classes/Reachability.m; sourceTree = "<group>"; };
 		03C3B5AB1739843800A466B9 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		03C3B5AD1739844700A466B9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		03D29D59173A133800218AE9 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = ../../../Desktop/black.png; sourceTree = "<group>"; };
 		03D29D5D173A19E200218AE9 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		03D29D5F173AF55C00218AE9 /* DBAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAdapter.h; path = ../../../../Downloads/DBAdapter.h; sourceTree = "<group>"; };
-		03D29D60173AF55C00218AE9 /* DBAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAdapter.m; path = ../../../../Downloads/DBAdapter.m; sourceTree = "<group>"; };
 		03D29D62173AF60000218AE9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -164,15 +161,13 @@
 		03833F1716EFB13300FF2B19 /* DriveSenseSkeleton */ = {
 			isa = PBXGroup;
 			children = (
-				03D29D5F173AF55C00218AE9 /* DBAdapter.h */,
-				03D29D60173AF55C00218AE9 /* DBAdapter.m */,
+				038CBAF417431F8C00E07085 /* DBAdapter.h */,
+				038CBAF217431F6A00E07085 /* DBAdapter.m */,
 				03C3B5A7173983A700A466B9 /* Reachability.h */,
 				03C3B5A8173983A700A466B9 /* Reachability.m */,
 				03833F2016EFB13300FF2B19 /* AppDelegate.h */,
 				03833F2116EFB13400FF2B19 /* AppDelegate.m */,
 				03833F2916EFB13500FF2B19 /* MainStoryboard_iPhone.storyboard */,
-				039E9151173B0AC9007C0B17 /* NavController.h */,
-				039E9152173B0AC9007C0B17 /* NavController.m */,
 				03833F5816EFBA3700FF2B19 /* MapViewController.h */,
 				03833F5916EFBA3700FF2B19 /* MapViewController.m */,
 				03833F5516EFB88100FF2B19 /* MainViewController.h */,
@@ -338,8 +333,7 @@
 				03833F3116EFB13600FF2B19 /* ViewController.m in Sources */,
 				03833F5716EFB88100FF2B19 /* MainViewController.m in Sources */,
 				03833F5A16EFBA3700FF2B19 /* MapViewController.m in Sources */,
-				03D29D61173AF55C00218AE9 /* DBAdapter.m in Sources */,
-				039E9153173B0AC9007C0B17 /* NavController.m in Sources */,
+				038CBAF317431F6A00E07085 /* DBAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

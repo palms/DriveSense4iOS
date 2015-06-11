@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vJe-4c-3SL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="eMJ-As-Hv3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="Fhc-JM-SSm">
+        <scene sceneID="k2d-fu-KHk">
             <objects>
-                <navigationController definesPresentationContext="YES" id="vJe-4c-3SL" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="DriveSenseBar" id="L9M-Rj-SBh">
+                <navigationController definesPresentationContext="YES" id="eMJ-As-Hv3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQG-ym-9Ed">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <outlet property="navBar" destination="L9M-Rj-SBh" id="ndM-Dc-qne"/>
-                        <segue destination="Fol-tt-k7x" kind="relationship" relationship="rootViewController" id="qdT-z4-4ZZ"/>
+                        <segue destination="Fol-tt-k7x" kind="relationship" relationship="rootViewController" id="iJA-qm-qq7"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aDT-XP-T8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="URS-z4-lFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1307" y="-1024"/>
+            <point key="canvasLocation" x="-1284" y="-1024"/>
         </scene>
         <!--Main View Controller - DriveSense iOS-->
         <scene sceneID="9uW-zR-UQN">
             <objects>
                 <viewController id="Fol-tt-k7x" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qoo-bh-aQT">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-rS-PSv">
+                                <rect key="frame" x="17" y="40" width="136" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="141" id="1RK-gY-Fcn"/>
+                                    <constraint firstAttribute="width" constant="136" id="9Nl-YM-4xQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Track">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -45,11 +47,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyH-ub-sff">
+                                <rect key="frame" x="172" y="40" width="136" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="141" id="Y7T-5O-j4d"/>
+                                    <constraint firstAttribute="width" constant="136" id="KaO-NF-WbS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Maps">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,34 +63,27 @@
                                     <segue destination="yXm-lN-BqN" kind="modal" id="lnd-Xp-LpB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFO-Mb-Dwk">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Upload">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="upload:" destination="Fol-tt-k7x" eventType="touchUpInside" id="l8g-GO-9t5"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPA-7y-lR5">
+                                <rect key="frame" x="17" y="339" width="78" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="CQ4-P7-DZd"/>
                                     <constraint firstAttribute="height" constant="65" id="HyA-9E-YOp"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DriveSense iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4u-Hk-FSR">
+                                <rect key="frame" x="109" y="339" width="199" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="wdM-QN-TS4"/>
+                                    <constraint firstAttribute="width" constant="199" id="6LX-2g-pL0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4V-2j-CSj">
+                                <rect key="frame" x="1" y="503" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="9oR-WS-xtP"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Auto Collect" width="147" id="Rng-Sk-TKf">
                                         <connections>
@@ -101,24 +97,37 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEg-6Q-568">
+                                <rect key="frame" x="17" y="115" width="136" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="upload:" destination="Fol-tt-k7x" eventType="touchUpInside" id="2nh-pJ-rel"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o4V-2j-CSj" firstAttribute="trailing" secondItem="qoo-bh-aQT" secondAttribute="trailing" type="default" id="3ec-Qv-U5H"/>
-                            <constraint firstItem="oFO-Mb-Dwk" firstAttribute="leading" secondItem="yPA-7y-lR5" secondAttribute="leading" type="default" id="5Bq-Iy-uEH"/>
-                            <constraint firstAttribute="bottom" secondItem="yPA-7y-lR5" secondAttribute="bottom" constant="185" id="CI8-6A-R3W"/>
-                            <constraint firstItem="oFO-Mb-Dwk" firstAttribute="top" secondItem="qoo-bh-aQT" secondAttribute="top" constant="91" id="HNT-2X-tWj"/>
-                            <constraint firstItem="w3a-rS-PSv" firstAttribute="leading" secondItem="qoo-bh-aQT" secondAttribute="leading" constant="15" id="HzK-34-f2g"/>
-                            <constraint firstItem="o4V-2j-CSj" firstAttribute="bottom" secondItem="qoo-bh-aQT" secondAttribute="bottom" type="default" id="MHA-KE-yZa"/>
-                            <constraint firstItem="Z4u-Hk-FSR" firstAttribute="bottom" secondItem="yPA-7y-lR5" secondAttribute="bottom" type="default" id="a0S-OF-0fN"/>
-                            <constraint firstItem="w3a-rS-PSv" firstAttribute="top" secondItem="qoo-bh-aQT" secondAttribute="top" constant="33" id="bdl-2H-82E"/>
-                            <constraint firstItem="oFO-Mb-Dwk" firstAttribute="leading" secondItem="w3a-rS-PSv" secondAttribute="leading" type="default" id="bwl-KS-ofW"/>
-                            <constraint firstItem="zyH-ub-sff" firstAttribute="top" secondItem="w3a-rS-PSv" secondAttribute="top" type="default" id="eiw-oU-KE7"/>
-                            <constraint firstItem="yPA-7y-lR5" firstAttribute="top" secondItem="Z4u-Hk-FSR" secondAttribute="top" type="default" id="fb4-W4-lgY"/>
-                            <constraint firstAttribute="trailing" secondItem="zyH-ub-sff" secondAttribute="trailing" constant="7" id="ldg-xk-l5A"/>
-                            <constraint firstItem="o4V-2j-CSj" firstAttribute="leading" secondItem="qoo-bh-aQT" secondAttribute="leading" type="default" id="rwy-FC-lte"/>
-                            <constraint firstItem="Z4u-Hk-FSR" firstAttribute="leading" secondItem="qoo-bh-aQT" secondAttribute="leading" constant="115" id="y3v-pE-WRG"/>
-                            <constraint firstItem="oFO-Mb-Dwk" firstAttribute="trailing" secondItem="w3a-rS-PSv" secondAttribute="trailing" type="default" id="yBx-fr-qKf"/>
+                            <constraint firstItem="o4V-2j-CSj" firstAttribute="leading" secondItem="qoo-bh-aQT" secondAttribute="leading" constant="1" id="1f2-eJ-4Ky"/>
+                            <constraint firstItem="w3a-rS-PSv" firstAttribute="leading" secondItem="qoo-bh-aQT" secondAttribute="leading" constant="17" id="3Dd-YM-IC9"/>
+                            <constraint firstItem="Z4u-Hk-FSR" firstAttribute="trailing" secondItem="zyH-ub-sff" secondAttribute="trailing" type="default" id="HrA-lf-8J1"/>
+                            <constraint firstItem="YEg-6Q-568" firstAttribute="top" secondItem="qoo-bh-aQT" secondAttribute="top" constant="115" id="M0p-jh-GEh"/>
+                            <constraint firstItem="Z4u-Hk-FSR" firstAttribute="leading" secondItem="qoo-bh-aQT" secondAttribute="leading" constant="109" id="UIn-MV-LHQ"/>
+                            <constraint firstItem="o4V-2j-CSj" firstAttribute="top" secondItem="qoo-bh-aQT" secondAttribute="top" constant="503" id="XRl-ad-DhF"/>
+                            <constraint firstAttribute="bottom" secondItem="yPA-7y-lR5" secondAttribute="bottom" constant="144" id="Xag-z0-Zla"/>
+                            <constraint firstItem="w3a-rS-PSv" firstAttribute="baseline" secondItem="zyH-ub-sff" secondAttribute="baseline" type="default" id="c6u-dR-8Te"/>
+                            <constraint firstItem="yPA-7y-lR5" firstAttribute="bottom" secondItem="Z4u-Hk-FSR" secondAttribute="bottom" type="default" id="f71-V6-s8i"/>
+                            <constraint firstItem="Z4u-Hk-FSR" firstAttribute="top" secondItem="yPA-7y-lR5" secondAttribute="top" type="default" id="gVs-nC-865"/>
+                            <constraint firstItem="yPA-7y-lR5" firstAttribute="leading" secondItem="YEg-6Q-568" secondAttribute="leading" type="default" id="gpD-7z-2xV"/>
+                            <constraint firstItem="w3a-rS-PSv" firstAttribute="top" secondItem="qoo-bh-aQT" secondAttribute="top" constant="40" id="nVb-FK-MLZ"/>
+                            <constraint firstItem="w3a-rS-PSv" firstAttribute="leading" secondItem="YEg-6Q-568" secondAttribute="leading" type="default" id="ooi-bV-zIn"/>
+                            <constraint firstItem="w3a-rS-PSv" firstAttribute="trailing" secondItem="YEg-6Q-568" secondAttribute="trailing" type="default" id="p46-pf-YhL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DriveSense iOS" id="2qf-6g-QKc"/>
@@ -128,7 +137,7 @@
                         <outlet property="mapButton" destination="zyH-ub-sff" id="faL-vS-ihO"/>
                         <outlet property="trackSpeedButton" destination="MiB-Dp-cbm" id="8BG-fx-BgD"/>
                         <outlet property="trackingButton" destination="w3a-rS-PSv" id="Bsc-k5-Qkq"/>
-                        <outlet property="uploadButton" destination="oFO-Mb-Dwk" id="uIa-hF-bpG"/>
+                        <outlet property="uploadButton" destination="YEg-6Q-568" id="LT7-oE-kJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-vQ-DIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,10 +152,13 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-zr-FOy"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mQ5-zr-FOy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                            </mapView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJQ-hN-lwY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="pWa-Jo-9Za">
+                                    <navigationItem title="Map" id="pWa-Jo-9Za">
                                         <barButtonItem key="rightBarButtonItem" title="Back" id="8R1-6C-F5L">
                                             <connections>
                                                 <segue destination="Fol-tt-k7x" kind="modal" id="4Q0-8h-bxe"/>
@@ -177,38 +189,12 @@
             <point key="canvasLocation" x="-442" y="-1024"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="autoCollectPress:"/>
-                <relationship kind="action" name="track:"/>
-                <relationship kind="action" name="trackSpeedPress:"/>
-                <relationship kind="action" name="upload:"/>
-                <relationship kind="outlet" name="autoCollectButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mapButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="trackSpeedButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="trackingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qdT-z4-4ZZ"/>
+        <segue reference="4Q0-8h-bxe"/>
     </inferredMetricsTieBreakers>
 </document>
